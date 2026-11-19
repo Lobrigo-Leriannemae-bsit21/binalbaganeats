@@ -9,6 +9,7 @@ Route::post('/jobs/{orderNumber}/accept', [RiderController::class, 'acceptJob'])
 
 Route::get('/assigned', [RiderController::class, 'assignedDeliveries'])->name('assigned');
 Route::get('/details/{orderNumber?}', [RiderController::class, 'deliveryDetails'])->name('details');
+Route::get('/status', [RiderController::class, 'deliveryDetails'])->name('status');
 Route::post('/details/{orderNumber}/status', [RiderController::class, 'updateDeliveryStatus'])->name('status.update');
 
 Route::get('/buy-for-me', [RiderController::class, 'buyForMeRequests'])->name('buy-for-me');
