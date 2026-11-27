@@ -1,0 +1,155 @@
+/* =========================================================
+   BinalbaganEats design system - foundation
+   ========================================================= */
+
+:root {
+    /* Primary brand palette */
+    --be-crimson: #C60C00;
+    --be-crimson-dark: #9E0A00;
+    --be-amber: #FA9600;
+    --be-white: #FFFFFF;
+    --be-charcoal: #1A1A1A;
+
+    /* Supporting colors */
+    --be-cream: #FFF7EC;
+    --be-border: #EADFCF;
+    --be-muted: #6B6B6B;
+    --be-success: #1E8E3E;
+    --be-warning: #E39000;
+    --be-danger: #C60C00;
+    --be-info: #1D6FD8;
+
+    /* Shape */
+    --be-radius: 14px;
+    --be-radius-sm: 10px;
+    --be-shadow: 0 4px 16px rgba(26, 26, 26, 0.08);
+}
+
+/* ---------- Role accents (set via <body class="role-...">) ---------- */
+body,
+body.role-customer {
+    --be-accent: #C60C00;
+    --be-accent-rgb: 198, 12, 0;
+    --be-accent-dark: #9E0A00;
+}
+body.role-vendor {
+    --be-accent: #FA9600;
+    --be-accent-rgb: 250, 150, 0;
+    --be-accent-dark: #D07E00;
+}
+body.role-rider {
+    --be-accent: #1E8E3E;
+    --be-accent-rgb: 30, 142, 62;
+    --be-accent-dark: #166F30;
+}
+body.role-admin {
+    --be-accent: #5B2A9E;
+    --be-accent-rgb: 91, 42, 158;
+    --be-accent-dark: #461F7C;
+}
+
+/* ---------- Bootstrap theme mapping ---------- */
+body {
+    --bs-primary: var(--be-accent);
+    --bs-primary-rgb: var(--be-accent-rgb);
+    --bs-link-color: var(--be-accent);
+    --bs-link-hover-color: var(--be-accent-dark);
+    --bs-link-color-rgb: var(--be-accent-rgb);
+    --bs-body-color: var(--be-charcoal);
+    --bs-body-bg: var(--be-cream);
+    --bs-border-radius: var(--be-radius-sm);
+    --bs-border-color: var(--be-border);
+
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: var(--be-charcoal);
+    background-color: var(--be-cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--be-charcoal);
+    font-weight: 700;
+}
+
+.btn {
+    border-radius: var(--be-radius-sm);
+    font-weight: 600;
+    padding: 0.55rem 1.1rem;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--be-accent);
+    --bs-btn-border-color: var(--be-accent);
+    --bs-btn-hover-bg: var(--be-accent-dark);
+    --bs-btn-hover-border-color: var(--be-accent-dark);
+    --bs-btn-active-bg: var(--be-accent-dark);
+    --bs-btn-active-border-color: var(--be-accent-dark);
+    --bs-btn-disabled-bg: var(--be-accent);
+    --bs-btn-disabled-border-color: var(--be-accent);
+    --bs-btn-focus-shadow-rgb: var(--be-accent-rgb);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--be-accent);
+    --bs-btn-border-color: var(--be-accent);
+    --bs-btn-hover-bg: var(--be-accent);
+    --bs-btn-hover-border-color: var(--be-accent);
+    --bs-btn-active-bg: var(--be-accent-dark);
+    --bs-btn-active-border-color: var(--be-accent-dark);
+    --bs-btn-focus-shadow-rgb: var(--be-accent-rgb);
+}
+
+.form-control,
+.form-select {
+    border-radius: var(--be-radius-sm);
+    border-color: var(--be-border);
+    padding: 0.6rem 0.85rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--be-accent);
+    box-shadow: 0 0 0 0.2rem rgba(var(--be-accent-rgb), 0.2);
+}
+
+/* ---------- Reusable components ---------- */
+.be-card {
+    background: var(--be-white);
+    border: 1px solid var(--be-border);
+    border-radius: var(--be-radius);
+    box-shadow: var(--be-shadow);
+}
+
+.be-logo { color: var(--be-charcoal); }
+.be-logo img { display: block; width: auto; }
+.be-wordmark { font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+.be-wordmark-a { color: var(--be-crimson); }
+.be-wordmark-b { color: var(--be-amber); }
+.be-tagline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--be-charcoal);
+    margin-top: 0.2rem;
+}
+
+/* Status badges (used for orders, payments, deliveries) */
+.be-badge {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+.be-badge-success { background: #E3F4E8; color: #166F30; }
+.be-badge-warning { background: #FFF1DA; color: #A66200; }
+.be-badge-danger  { background: #FBE3E1; color: #9E0A00; }
+.be-badge-info    { background: #E1ECFB; color: #1550A3; }
+.be-badge-neutral { background: #EFEFEF; color: #444444; }
+
+.be-footer {
+    color: var(--be-muted);
+    font-size: 0.85rem;
+}
+
+/* Prevent accidental horizontal overflow on phones */
+img, svg, video { max-width: 100%; }

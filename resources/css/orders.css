@@ -1,0 +1,115 @@
+/* =========================================================
+   Checkout, orders and tracking
+   ========================================================= */
+
+/* Selectable option cards (delivery zones, payment methods) */
+.be-choice {
+    display: block;
+    padding: 0.9rem 1rem;
+    border: 2px solid var(--be-border);
+    border-radius: var(--be-radius-sm);
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.be-choice:hover { border-color: var(--be-accent); }
+.btn-check:checked + .be-choice {
+    border-color: var(--be-accent);
+    background: rgba(var(--be-accent-rgb), 0.06);
+}
+.btn-check:focus-visible + .be-choice {
+    outline: 3px solid rgba(var(--be-accent-rgb), 0.35);
+    outline-offset: 2px;
+}
+.btn-check:disabled + .be-choice {
+    opacity: 0.55;
+    cursor: not-allowed;
+    background: #F6F3EE;
+}
+
+/* Numbered section headings */
+.be-num {
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    margin-right: 0.35rem;
+    border-radius: 50%;
+    background: var(--be-accent);
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+/* Soft inset panels */
+.be-inset {
+    background: #FFF7EC;
+    border: 1px dashed var(--be-border);
+    border-radius: var(--be-radius-sm);
+}
+.be-gcash-box {
+    background: #fff;
+    border: 1px solid var(--be-border);
+    border-radius: var(--be-radius-sm);
+    padding: 0.75rem 1rem;
+}
+
+/* Order confirmation check mark */
+.be-success-check {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--be-success);
+    color: #fff;
+    font-size: 2.4rem;
+}
+
+/* Vertical order tracker */
+.be-step {
+    position: relative;
+    padding: 0 0 1.75rem 2.75rem;
+}
+.be-step:last-child { padding-bottom: 0; }
+.be-step::before {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 28px;
+    bottom: 0;
+    width: 2px;
+    background: var(--be-border);
+}
+.be-step:last-child::before { display: none; }
+.be-step.done::before { background: var(--be-success); }
+
+.be-step-dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--be-border);
+    background: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    color: #fff;
+}
+.be-step.done .be-step-dot { background: var(--be-success); border-color: var(--be-success); }
+.be-step.current .be-step-dot {
+    border-color: var(--be-accent);
+    box-shadow: 0 0 0 4px rgba(var(--be-accent-rgb), 0.18);
+}
+.be-step.current .be-step-dot::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--be-accent);
+}
+
+.be-step-label { display: block; font-weight: 600; line-height: 28px; }
+.be-step.todo .be-step-label { color: var(--be-muted); font-weight: 500; }
+.be-step-note { display: block; font-size: 0.85rem; color: var(--be-muted); }

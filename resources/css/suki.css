@@ -1,0 +1,24 @@
+/* =========================================================
+   Suki Points
+   ========================================================= */
+
+.be-points-hero {
+    background: var(--be-crimson);
+    color: #fff;
+    border-radius: var(--be-radius);
+    box-shadow: var(--be-shadow);
+}
+
+.be-points-number {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+}
+.be-points-number span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.be-point-plus { color: var(--be-success); font-weight: 700; }
+.be-point-minus { color: var(--be-crimson); font-weight: 700; }

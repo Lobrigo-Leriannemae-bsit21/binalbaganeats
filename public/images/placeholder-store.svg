@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="No image available">
+  <rect width="400" height="300" fill="#FFF1DA"/>
+  <rect x="90" y="140" width="220" height="110" rx="6" fill="#FFFFFF" stroke="#EADFCF" stroke-width="5"/>
+  <path d="M80 140l16-50h208l16 50z" fill="#C60C00"/>
+  <path d="M120 140l8-50M160 140l4-50M200 140v-50M240 140l-4-50M280 140l-8-50" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="176" y="184" width="48" height="66" rx="4" fill="#FA9600"/>
+</svg>
